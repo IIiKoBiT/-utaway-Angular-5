@@ -1,0 +1,16 @@
+<nav class="sidebar">
+  <ul>
+    <li style="padding: 15px">
+      <input (change)="onlyMy()" type="checkbox" id="subscribeNews"  >
+      <label style="color: white" for="subscribeNews">Only my</label>
+    </li>
+    <li class="item" routerLink="/category/0" routerLinkActive="active">
+      All
+    </li>
+    <ng-container *ngFor="let cat of categories.categories">
+      <li class="item" routerLink="/category/{{cat.id}}" routerLinkActive="active">
+        {{cat.name}}
+      </li>
+    </ng-container>
+  </ul>
+</nav>

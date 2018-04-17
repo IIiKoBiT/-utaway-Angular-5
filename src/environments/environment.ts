@@ -4,5 +4,6 @@
 // The list of which env maps to which file can be found in `.angular-cli.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  authUrl : 'https://www.eventbrite.com/oauth/authorize?response_type=token&client_id=2GD3DWQMUFRZK2GO6D'
 };

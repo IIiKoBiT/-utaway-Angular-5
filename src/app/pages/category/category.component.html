@@ -1,0 +1,23 @@
+<app-sidebar></app-sidebar>
+
+<div class="container">
+  <div class="content"
+       infinite-scroll
+       [infiniteScrollDistance]="2"
+       [infiniteScrollThrottle]="300"
+       (scrolled)="onScroll()">
+    <ngx-loading [show]="flagLoad" [config]="{ backdropBorderRadius: '14px', fullScreenBackdrop: true }"></ngx-loading>
+    <ng-container *ngFor="let event of events.events">
+      <div class="event">
+        <div class="head-img">
+          <img class="preview-img" src="{{event['logo'] != null ? event['logo']['url'] : 'http://droidlessons.com/wp-content/themes/TechNews/images/img_not_available.jpg'}}" alt="">
+        </div>
+        <div class="info-block">
+          <div class="location-block">
+            <p class="title-block">{{event['name']['text']}}</p>
+          </div>
+        </div>
+      </div>
+    </ng-container>
+  </div>
+</div>

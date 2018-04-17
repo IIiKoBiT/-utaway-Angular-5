@@ -1,0 +1,2 @@
+<button (click)="authStart()"> Auth </button>
+<iframe *ngIf="auth" id='iframeId'  (load)="changeUrl($event)" width="100%" height="100%" [src]="apiUrl | safe"></iframe>
